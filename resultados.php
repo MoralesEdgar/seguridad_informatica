@@ -38,7 +38,7 @@ if ($resultado==1) {
 from susti");
     if (!$result)
         die("Error: no se pudo realizar la consulta");
-    echo '<br><center> Cifrado Afin<br>';
+    echo '<a href="index.html"><br><center> Cifrado Afin<br></a>';
     echo '<br><table border=1px class="table">';
     echo '<td>' .'ID'.'</td><td>' .'Mensaje'.'</td><td>' .'Llave A'.'</td><td>' .'original_LlaveA'.'</td><td>' .'Llave B'.'</td><td>' .'original_LlaveB'.'</td><td>' .'Cifrado'.'</td>';
     while($fila = mysqli_fetch_assoc($result))
@@ -69,7 +69,7 @@ if ($resultado==2) {
 from vige");
     if (!$result)
         die("Error: no se pudo realizar la consulta");
-    echo '<br><center> Cifrado Vigenere<br>';
+    echo '<a href="index.html"><br><center> Cifrado Vigenere<br></a>';
     echo '<br><table border=1px class="table">';
     echo '<td>' .'ID'.'</td><td>' .'Mensaje'.'</td><td>' .'Llave'.'</td><td>' .'original_LlaveB'.'</td><td>' .'Cifrado'.'</td>';
     while($fila = mysqli_fetch_assoc($result))
@@ -100,7 +100,7 @@ from transposicion");
 
     if (!$result)
         die("Error: no se pudo realizar la consulta");
-    echo '<br><center> Cifrado Transposicion<br>';
+    echo '<a href="index.html"><br><center> Cifrado Transposicion<br></a>';
     echo '<br><table border=1px class="table">';
     echo '<td>' .'ID'.'</td><td>' .'Mensaje'.'</td><td>' .'columna'.'</td><td>' .'columna_original'.'</td><td>' .'orden'.'</td><td>' .'original_orden'.'</td><td>' .'Cifrado'.'</td>';
     while($fila = mysqli_fetch_assoc($result))
@@ -111,4 +111,5 @@ from transposicion");
         echo '</tr>';
     }
 }
+
 ?>
