@@ -75,7 +75,7 @@ for ($q=0; $q<$norden ; $q++) {
 $tildes = $db_connection->query("SET NAMES 'utf8'");
 $result = mysqli_query($db_connection, "INSERT INTO transposicion
     VALUES ('','".$mensajet."',AES_ENCRYPT('".$columna."','transcolumna'),AES_ENCRYPT('".$orden."','transorden'),'".$cif."')");
-include ('prueba.html');
+include ('index.html');
 
 ?>
  

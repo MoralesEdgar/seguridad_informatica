@@ -158,5 +158,5 @@ while ( $j < $long){
 $tildes = $db_connection->query("SET NAMES 'utf8'");
 $result = mysqli_query($db_connection, "INSERT INTO vige
     VALUES ('','".$mensajevige."',AES_ENCRYPT ('".$llavevige."','vigepass'),'".$compl1."')");
-include ('prueba.html');
+include ('index.html');
  ?>

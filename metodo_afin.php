@@ -56,7 +56,7 @@ $tildes = $db_connection->query("SET NAMES 'utf8'");
 $result = mysqli_query($db_connection, "INSERT INTO susti
     VALUES ('','".$mensaje."',AES_ENCRYPT ('".$llave1."','afin'),AES_ENCRYPT ('".$llave2."','afin2'),'".$compl1."')");
 
-include ('prueba.html');
+include ('index.html');
 
 
  ?>
