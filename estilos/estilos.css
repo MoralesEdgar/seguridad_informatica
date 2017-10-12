@@ -9,3 +9,7 @@ form {
 h4{
     text-align: center;
 }
+
+.hidden{
+    display: none;
+}
