@@ -27,10 +27,11 @@
         </div>
     </nav>
 
-    <!-- FIN DE MENÚ ->
+    <!-- FIN DE MENÚ -->
+
+    <!-- ================ INICIO DE CIFRADO NORMAL ================ -->
 
     <!-- METODO AFIN SENCILLO -->
-
     <form class="z-depth-1" id="form_mafin" action="metodo_afin.php" method="POST">
         <h4>Método Afin</h4>
         <input type="text" name="llave1" placeholder="LLave A" required="required"/>
@@ -38,22 +39,18 @@
         <textarea name="mensaje" placeholder="Tu mensaje:"></textarea>
         <input type="submit" value="Enviar" name="boton" style="top: 85px; left: 110px"/>
     </form>
-
     <!-- FIN METODO AFIN SENCILLO -->
 
     <!-- MéTODO VIGENERE SENCILLO -->
-
     <form class="z-depth-1" id="form_mvigenere" action="metodo_vigenere.php" method="POST">
         <h4>Método Vigenere</h4>
         <input type="text" name="llavevige" placeholder="Llave" required="required"/>
         <textarea name="mensajevige" placeholder="Tu mensaje:"></textarea>
         <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
     </form>
-
     <!-- FIN METODO VIGENERE SENCILLO -->
 
     <!-- METODO TRANSPOSICION SENCILLO -->
-
     <form class="z-depth-1" id="form_mtransposicion" action="metodo_transposicion.php" method="POST">
         <h4>Método Transposicion</h4>
         <input type="text" name="columna" placeholder="# Columnas" required="required"/>
@@ -61,19 +58,20 @@
         <textarea name="mensajet" placeholder="Tu mensaje:"></textarea>
         <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
     </form>
-
     <!-- FIN METODO TRANSPOSICION SENCILLO -->
+
+    <!-- ================ FIN DE CIFRADO NORMAL ================ -->
 
     <!-- ================ INICIO DE METODOS CIFRADO CON ARCHIVOS ================ -->
 
     <!-- METODO AFIN ARCHIVO -->
 
-    <form class="z-depth-1" id="form_mafin" action="metodo_afin.php" method="POST">
+    <form class="z-depth-1" id="form_mafin" action="metodos_archivos/metodo_afin_archivo.php" method="POST">
         <h4>Método Afin</h4>
         <div class="file-field input-field" style="top: 30px">
             <div class="btn">
                 <span>Archivo</span>
-                <input type="file">
+                <input type="file" name="archivo">
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
@@ -86,12 +84,12 @@
 
     <!-- MéTODO VIGENERE ARCHIVO -->
 
-    <form class="z-depth-1" id="form_mvigenere" action="metodo_vigenere.php" method="POST">
+    <form class="z-depth-1" id="form_mvigenere" action="metodos_archivos/metodo_vigenere_archivo.php" method="POST">
         <h4>Método Vigenere</h4>
         <div class="file-field input-field" style="top: 30px">
             <div class="btn">
                 <span>Archivo</span>
-                <input type="file">
+                <input type="file" name="archivo">
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
@@ -104,12 +102,12 @@
 
     <!-- METODO TRANSPOSICION ARCHIVO -->
 
-    <form class="z-depth-1" id="form_mtransposicion" action="metodo_transposicion.php" method="POST">
+    <form class="z-depth-1" id="form_mtransposicion" action="metodos_archivos/metodo_transposicion_archivo.php" method="POST">
         <h4>Método Transposicion</h4>
         <div class="file-field input-field" style="top: 30px">
             <div class="btn">
                 <span>Archivo</span>
-                <input type="file">
+                <input type="file" name="archivo">
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
