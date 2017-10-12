@@ -1,0 +1,11 @@
+form {
+    height: 500px;
+    width: 400px;
+    margin: 5% auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+h4{
+    text-align: center;
+}
