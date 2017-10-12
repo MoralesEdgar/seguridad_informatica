@@ -4,4 +4,6 @@
 $(document).ready(function(){
     $("textarea").addClass("materialize-textarea")
     $("input[type='submit']").addClass("btn waves-effect waves-light")
-})
+
+    $('select').material_select();
+});

@@ -6,10 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Seguridad Informatica</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 <body>
-    <!-- Dropdown Structure -->
+    <!-- MENU Y DROPDOWN 1 -->
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!">Afin</a></li>
         <li><a href="#!">Vigenere</a></li>
@@ -26,12 +27,67 @@
         </div>
     </nav>
 
+    <!-- FIN DE MENÚ ->
+
+    <!-- METODO AFIN SENCILLO -->
+
+    <form class="z-depth-1" id="form_mafin" action="metodo_afin.php" method="POST">
+        <h4>Método Afin</h4>
+        <input type="text" name="name" placeholder="LLave A" required="required"/>
+        <input type="text" name="_replyto" placeholder="LLave B" required="required"/>
+        <textarea name="message" placeholder="Tu mensaje"></textarea>
+        <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
+    </form>
+
+    <!-- FIN METODO AFIN SENCILLO -->
+
+    <!-- MéTODO VIGENERE SENCILLO -->
+
+    <form class="z-depth-1" id="form_mvigenere" action="metodo_vigenere.php" method="POST">
+        <h4>Método Vigenere</h4>
+        <input type="text" name="name" placeholder="Llave" required="required"/>
+        <textarea name="message" placeholder="Tu mensaje"></textarea>
+        <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
+    </form>
+
+    <!-- FIN METODO VIGENERE SENCILLO -->
+
+    <!-- METODO TRANSPOSICION SENCILLO -->
+
+    <form class="z-depth-1" id="form_mtransposicion" action="metodo_transposicion.php" method="POST">
+        <h4>Método Transposicion</h4>
+        <input type="hidden" name="_Asunto" value="Contacto Code-pen"/>
+        <input type="text" name="name" placeholder="Tu nombre" required="required"/>
+        <input type="email" name="_replyto" placeholder="Tu email" required="required"/>
+        <textarea name="message" placeholder="Tu mensaje"></textarea>
+        <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
+    </form>
+
+    <!-- FIN METODO TRANSPOSICION SENCILLO -->
+
+    <!-- RESULTADOS -->
+
+    <form class="z-depth-1" id="contacto" action="metodo_transposicion.php" method="POST">
+        <h4>Resultados</h4>
+        <div class="input-field col s12" style="top: 20px">
+            <select>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="1">Método Afin</option>
+                <option value="2">Método Vigenere</option>
+                <option value="3">Método Transposicion</option>
+            </select>
+        </div>
+        <input type="submit" value="Enviar" style="top: 85px; left: 110px"/>
+    </form>
+
+    <!-- FIN RESULTADOS -->
+
 
 <!-- SCRIPT PARA JQUERY -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <!-- SCRIPT PARA MATERIALIZE -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <!-- SCRIPT PERSONAL -->
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="javascript/JS.js"></script>
 </body>
 </html>
