@@ -23,20 +23,46 @@ $ene=10;
 $mensaje="";
 $n1=0;
 $n2=0;
-$target_path = "C:\Users\Edgar Morales\Desktop\archivos";
+$target_path = "C:\Users\alexi\Desktop\archivos";
 $target_path = $target_path . basename( $_FILES['archivo']['name']);
 if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) ;
 #echo "<br>";
 $con=0;
+
+$file_result = "";
+if ($_FILES["archivo"]["error"] > 0) {
+    $file_result .= "archivo invalido";
+    $file_result .= "codigo de error" . $_FILES["archivo"]["error"] . "<br>";
+} else {
+    $target_path;
 #$nombre_archivo = $_POST['archivo']['tmp_name']; 
-$fp = fopen($target_path, "r") or exit("Unable to open file!");
+/*alexis comento-------------------------------$fp = fopen($target_path, "r") or exit("Unable to open file!");
 while(!feof($fp)) {
 $linea = fgets($fp);
-$sepa= explode(",", $linea);
+$sepa= explode("", $linea);
 #echo $linea."<br>";
 
+}*/
+//$archivo = addslashes(file_get_contents($_FILES["archivo"]["tmp_name"]));
+global $mensaje;
+global $n1;
+global $n2;
+foreach (file($target_path) as $llave => $campo) {
+    echo $campo. "<br>";
+    if($llave == 0){
+        $mensaje = $campo;
+    }
+    if($llave == 1){
+        $n1 = $campo;
+    }
+    if($llave == 2){
+        $n2 = $campo;
+    }
+
 }
-foreach($sepa as $campo){
+}
+echo "<br>";
+/*foreach($sepa as $campo){
         #echo $campo;
         $li=strlen($campo);
         #echo " ",$li;
@@ -64,11 +90,11 @@ if ($con==2) {
     }
 fclose($fp);
 
+
 #echo $mensaje," ",$n1," ",$n2;
-#echo "<br>";
+#echo "<br>";*/
 $long=strlen($mensaje);
 $compl1="";
-
 for($j=0; $j < $long; $j=$j+1){
     for($i=0; $i <= $men; $i=$i+1){
         

@@ -149,13 +149,35 @@ $abe[25][22]="v"; $abe[25][23]="w"; $abe[25][24]="x"; $abe[25][25]="y";# $abe[25
 #Variables
 $mensaje="";
 $llave="";
-$target_path = "C:\Users\Edgar Morales\Desktop\archivos";
+$target_path = "C:\Users\alexi\Desktop\archivos";
 $target_path = $target_path . basename( $_FILES['archivo']['name']);
 if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path));
 #echo "<br>";
 $con=0;
+
+$file_result = "";
+if ($_FILES["archivo"]["error"] > 0) {
+    $file_result .= "archivo invalido";
+    $file_result .= "codigo de error" . $_FILES["archivo"]["error"] . "<br>";
+} else {
+    $target_path;
+    global $mensaje;
+global $n1;
+global $n2;
+foreach (file($target_path) as $i => $campo) {
+    echo $campo. "<br>";
+    if($i == 0){
+        $mensaje = $campo;
+    }
+    if($i == 1){
+        $llave = $campo;
+    }
+
+}
+}
+echo "<br>";
 #$nombre_archivo = $_POST['archivo']['tmp_name']; 
-$fp = fopen($target_path, "r") or exit("Unable to open file!");
+/*$fp = fopen($target_path, "r") or exit("Unable to open file!");
 while(!feof($fp)) {
 $linea = fgets($fp);
 $sepa= explode(",", $linea);
@@ -186,7 +208,7 @@ if ($con==1) {
 fclose($fp);
 
 #echo $mensaje," ",$llave;
-#echo "<br>";
+#echo "<br>";*/
 $long=strlen($mensaje);
 $longllave=strlen($llave);
 $j=0;

@@ -22,12 +22,40 @@ $ene=10;
 $mensajet="";
 $columna=0;
 $orden=0;
-$target_path = "C:\Users\Edgar Morales\Desktop\archivos";
+$target_path = "C:\Users\alexi\Desktop\archivos";
 $target_path = $target_path . basename( $_FILES['archivo']['name']);
 if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path));
 $con=0;
 #$nombre_archivo = $_POST['archivo']['tmp_name']; 
-$fp = fopen($target_path, "r") or exit("Unable to open file!");
+
+$file_result = "";
+if ($_FILES["archivo"]["error"] > 0) {
+    $file_result .= "archivo invalido";
+    $file_result .= "codigo de error" . $_FILES["archivo"]["error"] . "<br>";
+} else {
+    $target_path;
+
+    global $mensaje;
+global $n1;
+global $n2;
+foreach (file($target_path) as $i => $campo) {
+    echo $campo. "<br>";
+    if($i == 0){
+        $mensajet = $campo;
+    }
+    if($i == 1){
+        $columna = $campo;
+    }
+    if($i == 2){
+        $orden = $campo;
+    }
+
+}
+}
+echo "<br>";
+
+
+/*$fp = fopen($target_path, "r") or exit("Unable to open file!");
 while(!feof($fp)) {
 $linea = fgets($fp);
 $sepa= explode(",", $linea);
@@ -62,7 +90,7 @@ if ($con==2) {
 fclose($fp);
 
 #echo $mensajet," ",$columna," ",$orden;
-#echo "<br>";
+#echo "<br>";*/
 $long=strlen($mensajet);
 
 $conta=0;
