@@ -149,7 +149,8 @@ $abe[25][22]="v"; $abe[25][23]="w"; $abe[25][24]="x"; $abe[25][25]="y";# $abe[25
 #Variables
 $mensaje="";
 $llave="";
-$target_path = "C:\Users\alexi\Desktop\archivos";
+$target_path = "C:\Users\Edgar Morales\Desktop\archivos";
+#$target_path = "C:\Users\alexi\Desktop\archivos";
 $target_path = $target_path . basename( $_FILES['archivo']['name']);
 if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path));
 #echo "<br>";
